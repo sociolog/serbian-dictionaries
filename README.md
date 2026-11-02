@@ -7,7 +7,7 @@ Hunspell spelling dictionaries and Hyphen hyphenation patterns for Serbian, in C
 | `sr_Cyrl_RS/` | Cyrillic | `sr_Cyrl_RS.aff`, `sr_Cyrl_RS.dic` | `hyph_sr_Cyrl_RS.dic` |
 | `sr_Latn_RS/` | Latin | `sr_Latn_RS.aff`, `sr_Latn_RS.dic` | `hyph_sr_Latn_RS.dic` |
 
-All files are UTF-8. Version 1.0; [CHANGELOG.md](CHANGELOG.md) lists what changed, and [INSTALL.md](INSTALL.md) says how to install the files in ONLYOFFICE, InDesign and other programs.
+All files are UTF-8. Version 1.0.1; [CHANGELOG.md](CHANGELOG.md) lists what changed, and [INSTALL.md](INSTALL.md) says how to install the files in ONLYOFFICE, InDesign and other programs.
 
 ## File names
 

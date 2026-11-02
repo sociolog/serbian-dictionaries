@@ -2,6 +2,11 @@
 
 Each version lists what changed from the one before. Version 1.0 lists what changed from the July 2019 files in `source/2019/`.
 
+## 1.0.1
+
+- **Spelling:** 90 place names are in, in the nominative only: `Требевић`, `Бјелашница`, `Зрмања`, `Шолта`, `Ладога`, `Лузон`, `Хиспањола` and others. LibreOffice's dictionary accepts them, and 1.0 accepted only their adjectives (`требевићки`, `ладошки`). LibreOffice has them in lowercase, which also lets `требевић` through; here they are capitalised. Their case forms, such as `Требевића`, are still marked, as in LibreOffice.
+- **Suggestions:** the `KEY` line in both `.aff` files had a Latin `s` among the Cyrillic letters (`sџцвбнм`, and `sdžcvbnm` in the Latin file). It is gone. LibreOffice's file has the same error.
+
 ## 1.0
 
 - **Hyphenation, Latin:** 35 root patterns mark the words where `nj` or `dž` is two letters (`kon-ju-ga-ci-ja`, `nad-ži-ve-ti`, `pod-že-lu-dač-ni`), while words such as `kanjon` and `odžak` keep one letter. They add 512 lines to the file, and `patterns/sr-latn-additions.pat` holds them in raw form.
