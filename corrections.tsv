@@ -2,31 +2,37 @@
 remove	пријевид/34	8е(2)	only превид
 remove	кљешта/211	10к	клијешта
 remove	гњездо/30	10к	гнијездо
-remove	угњездити/1413	10к	угнијездити
+remove	угњездити/1505	10к	угнијездити
+remove	жљеб/1167	10к	жлијеб; plural kept below
+add	жљебачки/745	10к	keeps the rest of жљеб/1167
 remove	жљеб/51	10к	жлијеб; plural kept below
+add	жљебова	10к	keeps the rest of жљеб/51
+add	жљебове	10к	keeps the rest of жљеб/51
+add	жљебови	10к	keeps the rest of жљеб/51
+add	жљебовима	10к	keeps the rest of жљеб/51
 remove	раздјел/16	10е	not in the Serbian norm
-remove	мршавјети/1340	8ђ	only the forms in -ити
-remove	мршавети/1644	8ђ	only the forms in -ити
-remove	слабети/1345	8ђ	only the forms in -ити
-remove	ћелавети/1644	8ђ	only the forms in -ити
+remove	мршавети/1736	8ђ	only the forms in -ити
+remove	мршавјети/1432	8ђ	only the forms in -ити
+remove	слабети/1437	8ђ	only the forms in -ити
+remove	ћелавети/1736	8ђ	only the forms in -ити
 remove	коњугација/4	2	the spelling is конј-
-remove	коњугациони/744	2	the spelling is конј-
-remove	коњугиран/746	2	the spelling is конј-
+remove	коњугациони/745	2	the spelling is конј-
+remove	коњугиран/747	2	the spelling is конј-
 remove	коњугирање/6	2	the spelling is конј-
-remove	коњугирати/1240	2	the spelling is конј-
-remove	коњугован/746	2	the spelling is конј-
+remove	коњугирати/1332	2	the spelling is конј-
+remove	коњугован/747	2	the spelling is конј-
 remove	коњугованост/9	2	the spelling is конј-
 remove	коњуговање/6	2	the spelling is конј-
-remove	коњуговати/1241	2	the spelling is конј-
+remove	коњуговати/1333	2	the spelling is конј-
 remove	коњунктив/8	2	the spelling is конј-
-remove	коњунктивални/745	2	the spelling is конј-
-add	конјунктивални/745	2	replaces коњунктивални
-remove	риједак/1007,988	9ђ	comparative is рјеђи
-remove	биједни/987,988	9ђ	comparative is бједнији
-remove	тијесни/994,988	9ђ	comparative is тјешњи
-remove	блијед/996,988	9ђ	comparative is бљеђи
-remove	лијеп/1035,988	9ђ	comparative is љепши
-remove	бијео/993,988	9ђ	comparative is бјељи
+remove	коњунктивални/746	2	the spelling is конј-
+add	конјунктивални/746	2	replaces коњунктивални
+remove	риједак/1008,989	9ђ	comparative is рјеђи
+remove	биједни/988,989	9ђ	comparative is бједнији
+remove	тијесни/995,989	9ђ	comparative is тјешњи
+remove	блијед/997,989	9ђ	comparative is бљеђи
+remove	лијеп/1036,989	9ђ	comparative is љепши
+remove	бијео/994,989	9ђ	comparative is бјељи
 add	рјеђи	9ђ	comparative of риједак
 add	рјеђег	9ђ	comparative of риједак
 add	рјеђега	9ђ	comparative of риједак
@@ -62,7 +68,6 @@ add	тјешњим	9ђ	comparative of тијесан
 add	тјешњих	9ђ	comparative of тијесан
 add	тјешњима	9ђ	comparative of тијесан
 add	тјешње	9ђ	comparative of тијесан
-add	тјешња	9ђ	comparative of тијесан
 add	тјешњој	9ђ	comparative of тијесан
 add	тјешњу	9ђ	comparative of тијесан
 add	тјешњом	9ђ	comparative of тијесан
@@ -78,423 +83,401 @@ add	бљеђа	9ђ	comparative of блијед
 add	бљеђој	9ђ	comparative of блијед
 add	бљеђу	9ђ	comparative of блијед
 add	бљеђом	9ђ	comparative of блијед
-add	љепши	9ђ	comparative of лијеп
-add	љепшег	9ђ	comparative of лијеп
-add	љепшега	9ђ	comparative of лијеп
-add	љепшем	9ђ	comparative of лијеп
-add	љепшему	9ђ	comparative of лијеп
-add	љепшим	9ђ	comparative of лијеп
-add	љепших	9ђ	comparative of лијеп
-add	љепшима	9ђ	comparative of лијеп
-add	љепше	9ђ	comparative of лијеп
-add	љепша	9ђ	comparative of лијеп
-add	љепшој	9ђ	comparative of лијеп
-add	љепшу	9ђ	comparative of лијеп
-add	љепшом	9ђ	comparative of лијеп
-add	бјељи	9ђ	comparative of бијел
-add	бјељег	9ђ	comparative of бијел
-add	бјељега	9ђ	comparative of бијел
-add	бјељем	9ђ	comparative of бијел
-add	бјељему	9ђ	comparative of бијел
-add	бјељим	9ђ	comparative of бијел
-add	бјељих	9ђ	comparative of бијел
-add	бјељима	9ђ	comparative of бијел
-add	бјеље	9ђ	comparative of бијел
-add	бјеља	9ђ	comparative of бијел
-add	бјељој	9ђ	comparative of бијел
-add	бјељу	9ђ	comparative of бијел
-add	бјељом	9ђ	comparative of бијел
-add	бијел/760	8, 9	masculine beside бијео
-add	цијел/760	10е	doublet of цио
-add	тијесан/746	9ђ	base form
-add	биједан/746	9ђ	base form
+add	бијел/761	8, 9	masculine beside бијео
+add	цијел/761	10е	doublet of цио
+add	тијесан/747	9ђ	base form
+add	биједан/747	9ђ	base form
 add	звјере/114	9г	genitive звјерета
-add	бљедожут/747	10ж	
-add	пољодјелац/1128	10и	as земљодјелац
+add	бљедожут/748	10ж	
+add	пољодјелац/1220	10и	as земљодјелац
 add	пољодјелац/22	10и	as земљодјелац
-add	пресиједати/1244	8в(4)	
-add	тупјети/1266	8ђ	
-add	тупети/1617	8ђ	
+add	пресиједати/1336	8в(4)	
+add	тупјети/1358	8ђ	
+add	тупети/1709	8ђ	
 add	инјунктив/8	2	
 add	сњегови	9д	plural of снијег
 add	сњегова	9д	plural of снијег
 add	сњеговима	9д	plural of снијег
 add	сњегове	9д	plural of снијег
-add	жљебови	10к	plural of жлијеб
-add	жљебова	10к	plural of жлијеб
-add	жљебовима	10к	plural of жлијеб
-add	жљебове	10к	plural of жлијеб
-remove	смијешни/987,988	9ђ	comparative is смјешнији
+remove	смијешни/988,989	9ђ	comparative is смјешнији
 add	предио	8е(2)	no rule fits its forms
-add	бесвијестан/753	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	бесвијестан/754	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	бесвијесност/9	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	бљеђан/746	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	вјеверичић/1139	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	бљеђан/747	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	вјеверичић/1231	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	вјеверичић/35	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	вјеверичица/1123	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	вјеверичица/1215	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	вјеверичица/25	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	вјеверче/1149	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	вјеверче/1241	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	вјеверче/26	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	вједогоњаст/747	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	вједогоњаст/748	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	вјеђица/25	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	вјеђни/745	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	вјеђни/746	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	вјероисповијед/34	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	вјетровод/34	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	вјетромер/10	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	вјетромер/2	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	вјетрометар/41	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	вјетропирски/744	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	дјеверична/1162	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	дјеверична/4	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	дједетина/1162	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	дједетина/4	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	вјетропирски/745	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	дјеверична/1254	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	дјеверична/1	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	дједетина/1254	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	дједетина/1	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	дјелиља/1	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	дјелиља/1123	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	забесједити/1287	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	загријевни/745	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	здјељати/1386	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	изумијевати/1244	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	кријештавац/1128	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	дјелиља/1215	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	забесједити/1379	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	загријевни/746	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	здјељати/1478	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	изумијевати/1336	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	кријештавац/1220	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	кријештавац/21	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	кријештећи	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	лијешће/53	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	лијешће/6	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	мјеров/8	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	мљекаџијски/744	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	мљекаџика/1123	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	мљекаџика/4	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	надјевовати/1239	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	намјеркати/1245	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	незаљечив/748	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	несвијестити/1284	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	озљедљив/748	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	погдјекоји/749	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	пријевознина/4	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	пријевојни/745	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	мљекаџијски/745	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	мљекаџика/1215	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	мљекаџика/1	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	надјевовати/1331	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	намјеркати/1337	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	незаљечив/749	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	несвијестити/1376	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	озљедљив/749	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	погдјекоји/750	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	пријевознина/1	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	пријевојни/746	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	пријеглас/3	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	прегорјетина/4	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	прегорјетина/1	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	пријеклоп/42	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	пријекуп/42	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	пријекупни/745	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	прељепљивати/1272	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	пријекупни/746	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	прељепљивати/1364	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	пријеплет/18	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	пријескок/5	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	пријеступништво/33	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	пригоријевати/1244	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	противприједлог/1131	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	пригоријевати/1336	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	противприједлог/1223	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	противприједлог/32	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	сријемски/1070	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	сријемски/745	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	сусједништво/33	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	тјестиво/30	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	хљебарка/1123	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	хљебарка/4	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	хљебарски/744	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	хљебни/745	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	цвјетнат/747	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	хљебарка/1215	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	хљебарка/1	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	хљебарски/745	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	хљебни/746	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	цвјетнат/748	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	цијевница/25	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	четвороцјевац/22	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	дозрио	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	неуспио	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	презрио	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 add	пресмио	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	ослијепјети/1266	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	ужутјети/1266	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
-add	просједјети/1266	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	ослијепјети/1358	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	ужутјети/1358	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
+add	просједјети/1358	РСЈ	ijekavian twin confirmed by the Rečnik (2011)
 remove	онјлајн/7	VladimirCeric	dictionary error for онлајн
 remove	онлјан	VladimirCeric	dictionary error for онлајн
 remove	понједељак/5	VladimirCeric	dictionary error for понедељак
 add	аеропорт/65	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	аеронаутски/744	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	безрецептни/744	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	бездна/4	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	бескорисни/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	бесценан/746	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	бесцјенан/746	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	аеронаутски/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	безрецептни/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	бездна/1	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	бескорисни/746	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	бесценан/747	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	бесцјенан/747	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	бомбончић/35	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	борат/18	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	борш/94	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	бригадисткиња/1	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	гатарица/25	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	голубњак/5	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	грабљати/1245	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	деловођски/1104	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	дјеловођски/1104	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	деловођство/33	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	демитизација/4	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	грабљати/1337	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	дјеловођски/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	демитизација/1	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	демиург/32	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	демиуршки/1061	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	демобилизациони/744	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	демократизирати/1240	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	демонизирати/1240	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	демиуршки/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	демобилизациони/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	демократизирати/1332	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	демонизирати/1332	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	демонијак/5	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	демонстратер/10	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	демонстратер/2	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	демос/3	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	десетминутни/744	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	десетмесечни/744	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	десетмјесечни/744	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	дефтер/10	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	десетминутни/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	десетмесечни/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	десетмјесечни/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	дефтер/2	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	дефтедар/11	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	дивокозји/749	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	дивокозји/750	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	динозаур/2	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	дипломанткиња/1	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	дијабетички/744	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	длански/744	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	дијабетички/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	длански/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	егида/1	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	езан/7	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	епикурски/744	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	епикурски/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	ефеб/44	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	завирнути/1259	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	завикнути/1249	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	загонити/1270	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	заглушавати/1244	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	завирнути/1351	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	завикнути/1341	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	загонити/1362	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	заглушавати/1336	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	законотворац/21	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	запретавати/1244	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	изнатпросечни/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	изнатпросјечни/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	запретавати/1336	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	изнатпросечни/746	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	изнатпросјечни/746	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	канкан/7	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	каучуков/748	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	кафеџијка/4	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	киптати/1280	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	каучуков/749	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	кафеџијка/1	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	киптати/1372	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	клиценоша/1	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	коварни/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	коварни/746	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	коине	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	крвавоцрвен/746	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	крвавоцрвен/747	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	кротитељица/25	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	локај/219	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	локајски/744	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	локајски/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	махагон/7	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	нафака/29	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	натуршницла/1	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	небулозни/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	одскорашњи/749	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	небулозни/746	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	одскорашњи/750	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	пенултима/1	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	плеће/53	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	плеће/6	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	плећи	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	погунђати/1245	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	подвиривати/1272	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	подузетнички/744	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	погунђати/1337	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	подвиривати/1364	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	подузетнички/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	полигам/13	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	полигамски/744	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	попрскивати/1272	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	поружњати/1244	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	поружњавати/1244	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	поспрдати/1245	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	преджетвени/744	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	полигамски/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	попрскивати/1364	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	поружњати/1336	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	поружњавати/1336	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	поспрдати/1337	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	преджетвени/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	предживот/18	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	претоваравати/1244	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	привикивати/1272	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	прикончати/1245	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	припржити/1274	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	прокуцати/1245	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	прокучивати/1272	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	прокучити/1274	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	промашавати/1244	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	просидбени/744	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	просилачки/744	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	радијев/748	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	рендгенов/748	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	претоваравати/1336	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	привикивати/1364	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	прикончати/1337	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	припржити/1366	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	прокуцати/1337	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	прокучивати/1364	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	прокучити/1366	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	промашавати/1336	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	просидбени/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	просилачки/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	радијев/749	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	рендгенов/749	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	рефригератор/2	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	римокатоликиња/1	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	рингераја/4	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	рингераја/1	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	руководитељица/25	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	сањалац/96	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	светлоноша/1	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	сезамов/748	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	сезамов/749	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	слабица/25	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	слабоћа/1	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	слабушни/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	слаткарија/4	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	стравни/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	слабушни/746	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	слаткарија/1	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	стравни/746	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	студиозус/3	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	суодговорни/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	суодговорни/746	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	суодговорност/9	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	суоптуженик/5	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	супин/7	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	сумахнит/747	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	теорисати/1248	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	трачарија/4	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	сумахнит/748	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	теорисати/1340	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	трачарија/1	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	тролеј/52	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	тролетњи/749	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	трнов/748	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	тролетњи/750	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	трнов/749	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	узакоњење/6	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	узакоњивати/1539	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	узнервозити/1397	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	узуелни/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	уручавати/1244	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	узакоњивати/1631	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	узнервозити/1489	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	узуелни/746	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	уручавати/1336	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	усисавач/50	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	ускрсење/6	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	успоривати/1272	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	усркнути/1249	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	устручљив/748	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	успоривати/1364	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	усркнути/1341	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	устручљив/749	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	утемељитељица/25	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	ушуљати/1245	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	уљуљкавати/1244	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	хаубични/744	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	ушуљати/1337	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	уљуљкавати/1336	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	хаубични/745	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	цетан/7	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	чедоморац/21	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	шафранов/748	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	шафранов/749	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	шахиња/1	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	шездесетгодишњак/5	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	шепртљанија/4	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	шепртљанија/1	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	шерибренди/40	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	шкрипуцати/1245	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	јазавчији/749	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	шкрипуцати/1337	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	јазавчији/750	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	једноумац/21	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	јутен/746	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	јутен/747	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	козле/385	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	пречанин/72	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	творитељ/85	РСЈ	standard word the dictionary lacked, found in the Rečnik check
 add	предјесен/231	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	пресветао/770	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	пресвијетао/770	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	трек/152	РСЈ	standard word the dictionary lacked, found in the Rečnik check
-add	арка/4	РСЈ	lowercase common noun, the dictionary had it only capitalised
-add	атика/29	РСЈ	lowercase common noun, the dictionary had it only capitalised
+add	пресветао/771	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	пресвијетао/771	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	трек/36	РСЈ	standard word the dictionary lacked, found in the Rečnik check
+add	арка/1	РСЈ	lowercase common noun, the dictionary had it only capitalised
+add	атика/29	РСЈ	lowercase common noun with its case forms; LibreOffice has the lowercase word only as a place name
 add	веста/1	РСЈ	lowercase common noun, the dictionary had it only capitalised
 add	галета/1	РСЈ	lowercase common noun, the dictionary had it only capitalised
-add	главина/4	РСЈ	lowercase common noun, the dictionary had it only capitalised
-add	драч/50	РСЈ	lowercase common noun, the dictionary had it only capitalised
-add	драча/1	РСЈ	lowercase common noun, the dictionary had it only capitalised
-add	ехидна/4	РСЈ	lowercase common noun, the dictionary had it only capitalised
+add	главина/1	РСЈ	lowercase common noun, the dictionary had it only capitalised
+add	драч/50	РСЈ	lowercase common noun with its case forms; LibreOffice has the lowercase word only as a place name
+add	драча/1	РСЈ	lowercase common noun with its case forms; LibreOffice has the lowercase word only as a place name
+add	ехидна/1	РСЈ	lowercase common noun, the dictionary had it only capitalised
 add	зорница/25	РСЈ	lowercase common noun, the dictionary had it only capitalised
 add	империјал/16	РСЈ	lowercase common noun, the dictionary had it only capitalised
-add	калина/4	РСЈ	lowercase common noun, the dictionary had it only capitalised
-add	кербер/10	РСЈ	lowercase common noun, the dictionary had it only capitalised
-add	клење/6	РСЈ	lowercase common noun, the dictionary had it only capitalised
+add	калина/1	РСЈ	lowercase common noun, the dictionary had it only capitalised
+add	кербер/2	РСЈ	lowercase common noun, the dictionary had it only capitalised
+add	клење/6	РСЈ	lowercase common noun with its case forms; LibreOffice has the lowercase word only as a place name
 add	корда/1	РСЈ	lowercase common noun, the dictionary had it only capitalised
 add	копар/41	РСЈ	lowercase common noun, the dictionary had it only capitalised
 add	ксантипа/1	РСЈ	lowercase common noun, the dictionary had it only capitalised
-add	ксерокс/24	РСЈ	lowercase common noun, the dictionary had it only capitalised
+add	ксерокс/3	РСЈ	lowercase common noun, the dictionary had it only capitalised
 add	мелиса/1	РСЈ	lowercase common noun, the dictionary had it only capitalised
 add	миро	РСЈ	lowercase common noun, the dictionary had it only capitalised
-add	панама/1	РСЈ	lowercase common noun, the dictionary had it only capitalised
+add	панама/1	РСЈ	lowercase common noun with its case forms; LibreOffice has the lowercase word only as a place name
 add	пике	РСЈ	lowercase common noun, the dictionary had it only capitalised
 add	планика/29	РСЈ	lowercase common noun, the dictionary had it only capitalised
 add	протеј/52	РСЈ	lowercase common noun, the dictionary had it only capitalised
 add	риза/1	РСЈ	lowercase common noun, the dictionary had it only capitalised
 add	сибила/1	РСЈ	lowercase common noun, the dictionary had it only capitalised
-add	симонија/4	РСЈ	lowercase common noun, the dictionary had it only capitalised
+add	симонија/1	РСЈ	lowercase common noun, the dictionary had it only capitalised
 add	спутњик/5	РСЈ	lowercase common noun, the dictionary had it only capitalised
 add	тафт/65	РСЈ	lowercase common noun, the dictionary had it only capitalised
 add	тире	РСЈ	lowercase common noun, the dictionary had it only capitalised
 add	токај/219	РСЈ	lowercase common noun, the dictionary had it only capitalised
 add	токмак/5	РСЈ	lowercase common noun, the dictionary had it only capitalised
 add	ујачки	РСЈ	lowercase common noun, the dictionary had it only capitalised
-add	ундина/4	РСЈ	lowercase common noun, the dictionary had it only capitalised
-add	шар/2	РСЈ	lowercase common noun, the dictionary had it only capitalised
-add	штава/4	РСЈ	lowercase common noun, the dictionary had it only capitalised
+add	ундина/1	РСЈ	lowercase common noun, the dictionary had it only capitalised
+add	шар/2	РСЈ	lowercase common noun with its case forms; LibreOffice has the lowercase word only as a place name
+add	штава/1	РСЈ	lowercase common noun with its case forms; LibreOffice has the lowercase word only as a place name
 add	штук/5	РСЈ	lowercase common noun, the dictionary had it only capitalised
-add	шљивовик/5	РСЈ	lowercase common noun, the dictionary had it only capitalised
-add	шљивовка/4	РСЈ	lowercase common noun, the dictionary had it only capitalised
+add	шљивовик/5	РСЈ	lowercase common noun with its case forms; LibreOffice has the lowercase word only as a place name
+add	шљивовка/1	РСЈ	lowercase common noun, the dictionary had it only capitalised
 add	љубица/25	РСЈ	lowercase common noun, the dictionary had it only capitalised
 add	драгољуб/44	РСЈ	lowercase common noun, the dictionary had it only capitalised
 add	пека/29	РСЈ	lowercase common noun, the dictionary had it only capitalised
 remove	изашто	sociolog	dictionary error, from the review of rare words
-remove	ознаш/1145	sociolog	dictionary error, from the review of rare words
+remove	ознаш/1237	sociolog	dictionary error, from the review of rare words
 remove	ознаш/62	sociolog	dictionary error, from the review of rare words
 remove	унеке	sociolog	dictionary error, from the review of rare words
-remove	супски/744	sociolog	dictionary error, from the review of rare words
-remove	сипски/1075	sociolog	dictionary error, from the review of rare words
-remove	успреман/746	sociolog	dictionary error, from the review of rare words
+remove	супски/745	sociolog	dictionary error, from the review of rare words
+remove	сип/1125	sociolog	dictionary error, from the review of rare words
+add	сип	sociolog	keeps the rest of сип/1125
+remove	успреман/747	sociolog	dictionary error, from the review of rare words
 remove	гредност/9	sociolog	dictionary error, from the review of rare words
 remove	одговореност/9	sociolog	dictionary error, from the review of rare words
 remove	договорност/9	sociolog	dictionary error, from the review of rare words
-remove	усигурни/745	sociolog	dictionary error, from the review of rare words
-remove	ократко/769	sociolog	dictionary error, from the review of rare words
+remove	усигурни/746	sociolog	dictionary error, from the review of rare words
+remove	ократко/770	sociolog	dictionary error, from the review of rare words
 remove	опасаност/9	sociolog	dictionary error, from the review of rare words
-remove	мједни/745	sociolog	dictionary error, from the review of rare words
-remove	мједни/987,988	sociolog	dictionary error, from the review of rare words
+remove	мједни/746	sociolog	dictionary error, from the review of rare words
+remove	мједни/988,989	sociolog	dictionary error, from the review of rare words
 remove	сигурање/6,19	sociolog	dictionary error, from the review of rare words
 remove	ротографија/4	sociolog	dictionary error, from the review of rare words
-remove	домаћен/746	sociolog	dictionary error, from the review of rare words
-remove	довјести/1389	sociolog	dictionary error, from the review of rare words
+remove	домаћен/747	sociolog	dictionary error, from the review of rare words
+remove	довјести/1481	sociolog	dictionary error, from the review of rare words
 remove	пудбина/4	sociolog	dictionary error, from the review of rare words
-remove	немучки/987,988	sociolog	dictionary error, from the review of rare words
-remove	потпрједседник/1130	sociolog	dictionary error, from the review of rare words
+remove	немучки/988,989	sociolog	dictionary error, from the review of rare words
+remove	потпрједседник/1222	sociolog	dictionary error, from the review of rare words
 remove	потпрједседник/5	sociolog	dictionary error, from the review of rare words
 remove	прамера/1	sociolog	dictionary error, from the review of rare words
 remove	запопљавање/6	sociolog	dictionary error, from the review of rare words
-remove	раденик/1130	sociolog	dictionary error, from the review of rare words
+remove	раденик/1222	sociolog	dictionary error, from the review of rare words
 remove	раденик/5	sociolog	dictionary error, from the review of rare words
-remove	додајни/745	sociolog	dictionary error, from the review of rare words
+remove	додајни/746	sociolog	dictionary error, from the review of rare words
 remove	прозома/1	sociolog	dictionary error, from the review of rare words
 remove	гиљке/47	sociolog	dictionary error, from the review of rare words
 remove	сцјена/4	sociolog	dictionary error, from the review of rare words
 remove	објезбеђење/6	sociolog	error for обезбјеђење, which stays
 remove	спомјеник/5	sociolog	dictionary error, from the review of rare words
 remove	чифтање/6	sociolog	dictionary error, from the review of rare words
-remove	девојана/1162	sociolog	dictionary error, from the review of rare words
+remove	девојана/1254	sociolog	dictionary error, from the review of rare words
 remove	девојана/4	sociolog	dictionary error, from the review of rare words
-remove	времјенски/744	sociolog	dictionary error, from the review of rare words
-remove	жлнски/1059	sociolog	dictionary error, from the review of rare words
+remove	времјенски/745	sociolog	dictionary error, from the review of rare words
+remove	жлне/1066	sociolog	dictionary error, from the review of rare words
+add	жлне	sociolog	keeps the rest of жлне/1066
 remove	јелинство/33	sociolog	dictionary error, from the review of rare words
-remove	потпасан/746,19	sociolog	dictionary error, from the review of rare words
-remove	раденички/744	sociolog	dictionary error, from the review of rare words
+remove	потпасан/747,19	sociolog	dictionary error, from the review of rare words
+remove	раденички/745	sociolog	dictionary error, from the review of rare words
 remove	рјеченица/25	sociolog	dictionary error, from the review of rare words
 remove	јабукар/11	sociolog	dictionary error, from the review of rare words
-remove	јабукар/1125	sociolog	dictionary error, from the review of rare words
-remove	тијешити/1246	sociolog	error for тјешити, which stays
+remove	јабукар/1217	sociolog	dictionary error, from the review of rare words
+remove	тијешити/1338	sociolog	error for тјешити, which stays
 remove	заинтересовање/6,19	sociolog	dictionary error, from the review of rare words
 remove	папуларност/9	sociolog	dictionary error, from the review of rare words
 remove	напомјена/4	sociolog	dictionary error, from the review of rare words
 remove	инстилација/4	sociolog	dictionary error, from the review of rare words
 remove	надљежност/9	sociolog	dictionary error, from the review of rare words
 remove	надложност/9	sociolog	dictionary error, from the review of rare words
-remove	пролијенити/1410	sociolog	dictionary error, from the review of rare words
-remove	папуларни/745	sociolog	dictionary error, from the review of rare words
-remove	трурски/1059	sociolog	dictionary error, from the review of rare words
-remove	тувски/1059	sociolog	dictionary error, from the review of rare words
+remove	пролијенити/1502	sociolog	dictionary error, from the review of rare words
+remove	папуларни/746	sociolog	dictionary error, from the review of rare words
+remove	труро/1077	sociolog	dictionary error, from the review of rare words
+add	труро	sociolog	keeps the rest of труро/1077
+remove	тува/1060	sociolog	dictionary error, from the review of rare words
+add	тува	sociolog	keeps the rest of тува/1060
 remove	потпасивање/6	sociolog	dictionary error, from the review of rare words
 remove	усавршивање/6	sociolog	dictionary error, from the review of rare words
-remove	арађански/744	sociolog	dictionary error, from the review of rare words
-remove	абиолошки/744	sociolog	dictionary error, from the review of rare words
-remove	опозитивни/745	sociolog	dictionary error, from the review of rare words
-remove	психилошки/744	sociolog	dictionary error, from the review of rare words
-remove	мађерски/1059	sociolog	dictionary error, from the review of rare words
-remove	мађерски/1060	sociolog	dictionary error, from the review of rare words
+remove	арађански/745	sociolog	dictionary error, from the review of rare words
+remove	абиолошки/745	sociolog	dictionary error, from the review of rare words
+remove	опозитивни/746	sociolog	dictionary error, from the review of rare words
+remove	психилошки/745	sociolog	dictionary error, from the review of rare words
+remove	мађер/1061	sociolog	dictionary error, from the review of rare words
+add	мађер	sociolog	keeps the rest of мађер/1061
+remove	мађере/1066	sociolog	dictionary error, from the review of rare words
+add	мађере	sociolog	keeps the rest of мађере/1066
 remove	наситно	sociolog	dictionary error, from the review of rare words
 remove	срједиште/53	sociolog	dictionary error, from the review of rare words
 remove	сувјеренитет/18	sociolog	dictionary error, from the review of rare words
-remove	нотални/745	sociolog	dictionary error, from the review of rare words
+remove	нотални/746	sociolog	dictionary error, from the review of rare words
 remove	трибунат/18	sociolog	dictionary error, from the review of rare words
-remove	буарски/1060	sociolog	dictionary error, from the review of rare words
+remove	буар/1061	sociolog	dictionary error, from the review of rare words
+add	буар	sociolog	keeps the rest of буар/1061
 remove	полуврјеме/172	sociolog	error for полувријеме, which stays
-remove	мосански/1058	sociolog	dictionary error, from the review of rare words
-remove	ненативни/987,988	sociolog	dictionary error, from the review of rare words
+remove	мосна/1117	sociolog	dictionary error, from the review of rare words
+remove	ненативни/988,989	sociolog	dictionary error, from the review of rare words
 remove	свјечаност/9	sociolog	dictionary error, from the review of rare words
 remove	свечасност/9	sociolog	dictionary error, from the review of rare words
-remove	агеографски/744	sociolog	dictionary error, from the review of rare words
+remove	агеографски/745	sociolog	dictionary error, from the review of rare words
 remove	функционалост/9,19	sociolog	dictionary error, from the review of rare words
-remove	елбански/1058	sociolog	dictionary error, from the review of rare words
+remove	елба/1059	sociolog	dictionary error, from the review of rare words
+add	елба	sociolog	keeps the rest of елба/1059
 remove	дједак/5	sociolog	dictionary error, from the review of rare words
 remove	мониториннг/32	sociolog	dictionary error, from the review of rare words
-remove	балтански/1058	sociolog	dictionary error, from the review of rare words
-remove	посрједник/1130	sociolog	dictionary error, from the review of rare words
+remove	балта/1059	sociolog	dictionary error, from the review of rare words
+add	балта	sociolog	keeps the rest of балта/1059
+remove	посрједник/1222	sociolog	dictionary error, from the review of rare words
 remove	посрједник/5	sociolog	dictionary error, from the review of rare words
-remove	једностазни/745	sociolog	dictionary error, from the review of rare words
+remove	једностазни/746	sociolog	dictionary error, from the review of rare words
 remove	дентификација/4	sociolog	dictionary error, from the review of rare words
 remove	спацијалност/9	sociolog	dictionary error, from the review of rare words
-remove	превјести/1389	sociolog	dictionary error, from the review of rare words
+remove	превјести/1481	sociolog	dictionary error, from the review of rare words
 remove	преосвештвенство/33	sociolog	dictionary error, from the review of rare words
-remove	упрепастити/1403	sociolog	dictionary error, from the review of rare words
+remove	упрепастити/1495	sociolog	dictionary error, from the review of rare words
 remove	успособљавање/6	sociolog	dictionary error, from the review of rare words
-remove	дјешавати/1244	sociolog	dictionary error, from the review of rare words
+remove	дјешавати/1336	sociolog	dictionary error, from the review of rare words
 remove	тјековина/4	sociolog	dictionary error, from the review of rare words
 remove	позиционирње/6	sociolog	dictionary error, from the review of rare words
-remove	јучерањи/749	sociolog	dictionary error, from the review of rare words
+remove	јучерањи/750	sociolog	dictionary error, from the review of rare words
 remove	упопуњавање/6	sociolog	dictionary error, from the review of rare words
 remove	сексплоатација/4	sociolog	dictionary error, from the review of rare words
 remove	резинденција/19	sociolog	dictionary error, from the review of rare words
 remove	красификација/4	sociolog	dictionary error, from the review of rare words
 remove	омбдусман/7	sociolog	dictionary error, from the review of rare words
-remove	сирдијски/1059	sociolog	dictionary error, from the review of rare words
+remove	сирдија/1060	sociolog	dictionary error, from the review of rare words
+add	сирдија	sociolog	keeps the rest of сирдија/1060
 remove	перформанаса/1	sociolog	dictionary error, from the review of rare words
 remove	свеобухватње/6	sociolog	dictionary error, from the review of rare words
 remove	компатабилност/9	sociolog	dictionary error, from the review of rare words
-remove	ахронолошки/744	sociolog	dictionary error, from the review of rare words
+remove	ахронолошки/745	sociolog	dictionary error, from the review of rare words
 remove	термолектрана/4	sociolog	dictionary error, from the review of rare words
 remove	истрзање/6	sociolog	dictionary error, from the review of rare words
 remove	утемјељење/6	sociolog	dictionary error, from the review of rare words
 remove	авиокомапнија/4	sociolog	dictionary error, from the review of rare words
-remove	успособљен/746	sociolog	dictionary error, from the review of rare words
+remove	успособљен/747	sociolog	dictionary error, from the review of rare words
 add	итекако	sociolog	common word the dictionary rejected (srLex)
 add	мишем	sociolog	instrumental of миш; the dictionary had only мишом
 add	венцем	sociolog	instrumental of венац; the dictionary had only венцом
@@ -502,93 +485,20 @@ add	вијенцем	sociolog	ijekavian twin of венцем
 add	шоуа	sociolog	genitive of шоу, missing
 add	лејди	sociolog	common word the dictionary rejected (srLex)
 add	вебсајт/65	sociolog	common word the dictionary rejected (srLex); flags as сајт
-add	Азов	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Антикости	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Апалачи	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Арал	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Арно	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Бананал	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Банкс	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Батерст	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Бајлот	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Беркнер	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Бишево	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Бокшевица	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Брегава	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Брзава	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Бугаинвил	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Бјелашница	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Венерн	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Ветерница	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Винипегосис	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Галипољ	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Гвадалканал	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Донгтинг	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Доњец	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Драговиштица	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Елзмир	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Ереник	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Зрмања	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Иловик	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Карашица	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Комсомолац	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Корнволис	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Котељни	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Коутс	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Крбава	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Лаб	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Ладога	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Лелија	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Лејте	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Лоња	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Лугомир	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Лузон	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Маганик	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Маражо	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Миндоро	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Молуци	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Мостонга	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Муртер	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Негрос	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Нипигон	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Нордаустландет	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Оланд	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Оњега	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Палаван	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Панај	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Плазовић	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Плитвица	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Потпећ	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Прењ	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Радика	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Самерсет	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Саутемптон	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Серам	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Сибујан	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Сирет	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Сињајевина	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Сулавеси	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Сумба	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Сумбава	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Сутла	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Сјеланд	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Тасман	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Темштица	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Тибер	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Топоник	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Торенс	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Требевић	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Унац	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Урмија	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Халмахера	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Хиспањола	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Целебес	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Чакор	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Чврсница	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Чилое	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Чиово	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Чичагов	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Шолта	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Јиланд	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Њемен	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
-add	Ћехотина	LibreOffice	place name in LibreOffice sr.dic, missing here; nominative only
+remove	корејa/1184	sociolog	Latin a in a Cyrillic word
+remove	папратиштe	sociolog	Latin e in a Cyrillic word
+remove	изказати/1477	sociolog	исказати; corrected in Korektor (2019)
+remove	монофизтски/745	sociolog	монофизитски; corrected in Korektor (2019)
+remove	унитаризција/4	sociolog	унитаризација; corrected in Korektor (2019)
+remove	амерић/1082	sociolog	амерички; corrected in Korektor (2019)
+remove	Емпедокле/1241	sociolog	possessive Емпедоклов, not Емпедоклетов; corrected in Korektor (2019)
+add	Емпедокле/1317	sociolog	Емпедоклов
+add	папратиште/6	sociolog	case forms, in place of папратиштe
+add	адхерентност/9,19	sociolog	missing
+add	Надал/1228	sociolog	name, as in Korektor (2019)
+add	Надал/16	sociolog	name, as in Korektor (2019)
+add	Ноле/1241	sociolog	name, as in Korektor (2019)
+add	Ноле/115	sociolog	name, as in Korektor (2019)
+add	Федерер/2	sociolog	name, as in Korektor (2019)
+add	Федерер/1216	sociolog	name, as in Korektor (2019)
+add	РСД	sociolog	abbreviation of the Serbian dinar, as in Korektor (2019)

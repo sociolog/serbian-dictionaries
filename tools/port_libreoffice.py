@@ -4,13 +4,14 @@ repository, with a checkout of LibreOffice's dictionaries repository:
 
     python3 tools/port_libreoffice.py ../dictionaries
 
-LibreOffice's sr/sr.dic is another generation of the same rule-based dictionary as ours, so its
-affix classes are numbered differently and some words are built differently (сип/1125 gives сип
-and сипски). Each correction is therefore matched by the word forms it gives, not by its flags:
+Our spelling files are LibreOffice's sr/ files at commit 4f1df64 with corrections.tsv applied, so
+for that commit this gives the same files as tools/apply_corrections.py. A later version of
+LibreOffice's file may number its affix classes differently or build some words differently (сип/1125
+gives сип and сипски), so each correction is matched by the word forms it gives, not by its flags:
 a form a correction touches ends up accepted exactly when sr_Cyrl_RS accepts it, and every other
 form keeps LibreOffice's verdict. sr-Latn.dic is a line-by-line transliteration of sr.dic with
-the same classes, so every change is made in both. The .aff files get our KEY fix and our MAP, TRY
-and REP tables. tools/check_libreoffice.py checks the result.
+the same classes, so every change is made in both. The .aff files get the rule fixes of
+aff-fixes.tsv, our KEY fix and our MAP, TRY and REP tables. tools/check_libreoffice.py checks the result.
 """
 import bisect
 import collections
@@ -20,7 +21,7 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from apply_corrections import latin  # noqa: E402
+from apply_corrections import aff_fixes, latin  # noqa: E402
 
 ALPHABET = "абвгдђежзијклљмнњопрстћуфхцчџш"
 ORDER = {c: i for i, c in enumerate(ALPHABET)}
@@ -87,6 +88,29 @@ class Aff:
         return out
 
 
+def fix(lines, fixes):
+    """Applies aff-fixes.tsv by the rule's content, whatever its class number: a later version of
+    LibreOffice's file may number the class differently, or have the rule fixed already."""
+    by_rule = {tuple(o.split()[:1] + o.split()[2:]): n.split()[2:] for o, n in fixes.items()}
+    out = []
+    for l in lines:
+        f = l.split()
+        if len(f) >= 4 and tuple(f[:1] + f[2:]) in by_rule:
+            l = " ".join(f[:2] + by_rule[tuple(f[:1] + f[2:])])
+        out.append(l)
+    return out
+
+
+def takes(f, forms):
+    """Whether Hunspell takes f: as it is, a capitalised word also in lowercase, and a word in
+    capitals also capitalised or in lowercase."""
+    if f in forms:
+        return True
+    if len(f) > 1 and f.isupper():
+        return f.lower() in forms or f[:1] + f[1:].lower() in forms
+    return f[:1].isupper() and f[1:] == f[1:].lower() and f.lower() in forms
+
+
 def key(stem):
     return [ORDER.get(c, 100 + ord(c)) for c in stem.casefold()], stem
 
@@ -94,7 +118,7 @@ def key(stem):
 def main():
     lo_dir = sys.argv[1] + "/sr"
     ours = Aff(read("sr_Cyrl_RS/sr_Cyrl_RS.aff"))
-    lo_aff = read(lo_dir + "/sr.aff")
+    lo_aff = fix(read(lo_dir + "/sr.aff"), aff_fixes())
     lo = Aff(lo_aff)
     dic = entries(lo_dir + "/sr.dic")
     ours_dic = entries("sr_Cyrl_RS/sr_Cyrl_RS.dic")
@@ -138,7 +162,7 @@ def main():
     report, notes = collections.Counter(), []
 
     # An entry that gives a form to be gone is taken out. What else it gave stays: through the
-    # same stem with fewer classes, where that gives only those forms, then through the 1.0.1
+    # same stem with fewer classes, where that gives only those forms, then through our
     # entries for the rest, and as bare words where no entry gives just them.
     lo_all = set()
     for e in dic:
@@ -160,10 +184,11 @@ def main():
         splits.append((e, [narrower] if narrower else [], rest - (lo.forms(narrower) if narrower else set())))
     # Forms that LibreOffice's other entries still give need nothing in their place.
     left_all = set().union(*(left for _, _, left in splits)) if splits else set()
+    narrow_all = set().union(*(lo.forms(n[0]) for _, n, _ in splits if n)) if splits else set()
     still = set()
     for i, e in enumerate(dic):
         if i not in removals:
-            still |= lo.forms(e) & left_all
+            still |= lo.forms(e) & (left_all | narrow_all)
     by_form = collections.defaultdict(list)
     for o in ours_dic:
         for f in ours.forms(o) & (left_all - still):
@@ -171,6 +196,8 @@ def main():
     replacements = []
     for e, new, left in splits:
         left = left - still
+        if new and lo.forms(new[0]) <= still:
+            new = []
         for f in sorted(left):
             if f not in left:
                 continue
@@ -189,7 +216,7 @@ def main():
             notes.append(f"{e} -> {', '.join(new)}")
 
     keep = [e for i, e in enumerate(dic) if i not in removals]
-    lowered = {f[:1].lower() + f[1:] for f in touched}
+    lowered = {f.lower() for f in touched} | {f[:1] + f[1:].lower() for f in touched}
     present = set()
     for e in keep + replacements:
         present |= lo.forms(e) & (touched | lowered)
@@ -197,11 +224,13 @@ def main():
     for action, entry, want in corrections:
         if action != "add":
             continue
-        # Hunspell also takes a capitalised word whose lowercase form is in the dictionary.
-        if all(f in present or (f[:1].isupper() and f[:1].lower() + f[1:] in present) for f in want):
+        t = translate(entry)
+        if t in replacements:
+            report["additions a split already made"] += 1
+            continue
+        if all(takes(f, present) for f in want):
             report["additions LibreOffice already accepts"] += 1
             continue
-        t = translate(entry)
         if t not in added:
             added.append(t)
             present |= want
@@ -238,7 +267,7 @@ def main():
         return out + extra + [""]
 
     write(lo_dir + "/sr.aff", new_aff(lo_aff, "sr_Cyrl_RS/sr_Cyrl_RS.aff", extra))
-    write(lo_dir + "/sr-Latn.aff", new_aff(read(lo_dir + "/sr-Latn.aff"), "sr_Latn_RS/sr_Latn_RS.aff", [latin(l) for l in extra]))
+    write(lo_dir + "/sr-Latn.aff", new_aff(fix(read(lo_dir + "/sr-Latn.aff"), aff_fixes(latin)), "sr_Latn_RS/sr_Latn_RS.aff", [latin(l) for l in extra]))
     write(lo_dir + "/sr.dic", [str(len(out))] + out + [""])
     write(lo_dir + "/sr-Latn.dic", [str(len(out))] + [latin(e) for e in out] + [""])
     print(f"{len(dic)} entries, now {len(out)}; new affix classes: {', '.join(new_classes.values()) or 'none'}")

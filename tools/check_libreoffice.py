@@ -5,8 +5,8 @@ folder of the repository:
     python3 tools/check_libreoffice.py ../dictionaries [base]
 
 It compares the files in sr/ with those at the base commit (HEAD by default), in both scripts:
-a word's verdict may change only where a correction touches it, and there it must match
-sr_Cyrl_RS and sr_Latn_RS. The forms of every entry are listed, and Hunspell is asked too when
+a word's verdict may change only where a correction touches it (an entry in corrections.tsv, or
+an entry using a rule of aff-fixes.tsv), and there it must match sr_Cyrl_RS and sr_Latn_RS. The forms of every entry are listed, and Hunspell is asked too when
 libhunspell is installed: about the corrected words, as written, capitalised and in capitals, and
 about 100,000 other forms chosen at random. It exits with 1 if anything differs.
 """
@@ -20,14 +20,9 @@ import tempfile
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from apply_corrections import latin  # noqa: E402
-from port_libreoffice import Aff, read  # noqa: E402
+from port_libreoffice import Aff, read, takes  # noqa: E402
 
 SCRIPTS = (("Cyrillic", "sr", "sr_Cyrl_RS/sr_Cyrl_RS", lambda e: e), ("Latin", "sr-Latn", "sr_Latn_RS/sr_Latn_RS", latin))
-
-
-def accepted(f, forms):
-    # Hunspell also takes a capitalised word whose lowercase form is in the dictionary.
-    return f in forms or (f[:1].isupper() and f[:1].lower() + f[1:] in forms)
 
 
 def all_forms(aff, dic):
@@ -42,8 +37,9 @@ def hunspell():
     name = ctypes.util.find_library("hunspell") or ctypes.util.find_library("hunspell-1.7")
     for n in [name, "libhunspell-1.7.so.0", "libhunspell-1.7.0.dylib"]:
         try:
-            lib = ctypes.CDLL(n)
-        except (OSError, TypeError):
+            lib = ctypes.CDLL(n) if n else None
+            lib.Hunspell_create
+        except (OSError, AttributeError):
             continue
         lib.Hunspell_create.restype = ctypes.c_void_p
         lib.Hunspell_create.argtypes = [ctypes.c_char_p, ctypes.c_char_p]
@@ -69,12 +65,19 @@ def main():
         touched = set()
         for _, e in rows:
             touched |= ours_aff.forms(tr(e))
+        # A corrected affix rule changes the forms of every entry that uses it.
+        oa, na = Aff(old["aff"]), Aff(new["aff"])
+        fixed = {k for k in oa.kind if k in na.kind and oa.content(k) != na.content(k)}
+        for d, a in ((old["dic"], oa), (new["dic"], na)):
+            for e in d[1:]:
+                if e and fixed & set(e.partition("/")[2].split(",")):
+                    touched |= a.forms(e)
         words = touched | {f[:1].upper() + f[1:] for f in touched}
         O, P = all_forms(old["aff"], old["dic"]), all_forms(new["aff"], new["dic"])
         U = all_forms(read(ours_base + ".aff"), read(ours_base + ".dic"))
-        changed = {f for f in (O ^ P) | {f[:1].upper() + f[1:] for f in O ^ P} if accepted(f, O) != accepted(f, P)}
+        changed = {f for f in (O ^ P) | {f[:1].upper() + f[1:] for f in O ^ P} if takes(f, O) != takes(f, P)}
         outside = changed - words
-        disagree = {f for f in words if accepted(f, P) != accepted(f, U)}
+        disagree = {f for f in words if takes(f, P) != takes(f, U)}
         print(f"{name}: {len(O):,} forms, now {len(P):,}; {len(changed):,} verdicts changed, {len(outside)} outside the corrections")
         print(f"  {len(words):,} corrected words, {len(disagree)} unlike {ours_base}")
         failed |= bool(outside or disagree)

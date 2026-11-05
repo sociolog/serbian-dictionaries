@@ -1,10 +1,10 @@
 UTF-8
 LEFTHYPHENMIN 2
 RIGHTHYPHENMIN 2
-% Modified version of the Serbian Latin patterns of LibreOffice's dictionaries, which go back to
-% Dejan Muhamedagic's TeX patterns in hyph-utf8. Not supported by their authors.
-% The changes are listed in CHANGELOG.md, which comes with this file.
-% Original: https://github.com/LibreOffice/dictionaries/tree/master/sr
+% Modified version of the Serbian Latin patterns of Milutin Smiljanic's Korektor (2019), which go
+% back to Goran Rakic's hyphen-sr and Dejan Muhamedagic's TeX patterns in hyph-utf8. Not supported
+% by their authors. The changes are listed in CHANGELOG.md, which comes with this file.
+% Original: https://github.com/msmiljan/korektor/blob/e56d916/src/Korektor/hyph_sr-Latn.dic
 
 # rastavi iza suglasnika
 2a1

@@ -1,10 +1,22 @@
 # Changes
 
-Each version lists what changed from the one before. Version 1.0 lists what changed from the July 2019 files in `source/2019/`.
+Each version lists what changed from the one before. Version 1.0 lists what changed from the July 2019 files of Milutin Smiljanić's Korektor, which were in `source/2019/` until 1.1.
 
-## Unreleased
+## 1.1
 
-- **Tools:** `tools/port_libreoffice.py` ports `corrections.tsv` onto LibreOffice's Serbian dictionaries, and `tools/check_libreoffice.py` checks the result. The dictionaries themselves are unchanged.
+- **Base and licence:** the spelling dictionaries are now built on LibreOffice's Serbian dictionary, version 2019.04.19 (LibreOffice dictionaries commit 4f1df64, in `source/libreoffice/`), which Milutin Smiljanić offers under GNU LGPL 3 or later, MPL 2 or later, or GNU GPL 3 or later.
+  - 1.0 and 1.0.1 were built on the July 2019 files of his Korektor ([msmiljan/korektor](https://github.com/msmiljan/korektor), commit e56d916), byte for byte. He offers those under GNU GPL 3 (the repository) and GNU LGPL 3 (its LibreOffice extension) only.
+  - The README of those versions gave them the three licences of the LibreOffice version, which their source doesn't state. The 2.9% of stems it called of unknown origin are his own later edits.
+- **Spelling:** everything 1.0.1 accepts is still accepted, in both scripts. Newly accepted are 5,027 lowercase forms of place names that 1.0.1 has capitalised (`земун`, `дармштат`), as LibreOffice accepts them, and 16 lowercase place-name stems (`каспиј`, `лакадив`).
+- **Corrections:** `corrections.tsv` now lists edits on LibreOffice's file, with its affix classes: 147 entries out, 356 in. That covers:
+  - every correction of 1.0.1. LibreOffice's file already had some of them, such as the 90 capitalised place names, which it accepts through their lowercase entries;
+  - 15 entries that keep the correct forms of entries taken out (`сип/1125` gave `сипски`; `сип` stays);
+  - fixes for errors in LibreOffice's file that Korektor no longer has:
+    - a Latin `o` in the instrumental ending of nouns in -ац (`Барајевцoм`), corrected in `aff-fixes.tsv`, and a Latin letter in `корејa` and `папратиштe`;
+    - misspellings: `изказати` (for `исказати`), `монофизтски`, `унитаризција`, `америћки`, and `Емпедоклетов` (for `Емпедоклов`);
+    - forms it lacked: the case forms of `папратиште`, `адхерентност`, and `Надал`, `Федерер`, `Ноле` and `РСД`.
+- **Hyphenation:** unchanged. These files are Smiljanić's too, from Korektor, and their licence is now given as that of his extension, GNU LGPL 3. The Latin file's header named LibreOffice's file as its original; it now names Korektor's.
+- **Tools:** `tools/apply_corrections.py` builds the spelling dictionaries from `source/libreoffice/`, `corrections.tsv`, `aff-fixes.tsv` and `tables/`. `tools/port_libreoffice.py` applies the same corrections to a checkout of LibreOffice's dictionaries, matching them by word forms, and `tools/check_libreoffice.py` checks the result.
 
 ## 1.0.1
 
