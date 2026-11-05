@@ -41,6 +41,17 @@ python3 tools/apply_corrections.py
 
 The script doesn't touch the `.aff` files, which differ from the source only by the suggestion tables, or the hyphenation files. `python3 tools/package.py <version>` builds the release archives in `dist/`.
 
+### Porting the corrections to LibreOffice
+
+LibreOffice's `sr/sr.dic` is another generation of the same rule-based dictionary, so its affix classes are numbered differently and some words are built differently. `corrections.tsv` can't be copied into it entry by entry. Instead, `tools/port_libreoffice.py` matches each correction by the word forms it gives: a form a correction touches ends up accepted exactly when `sr_Cyrl_RS` accepts it, and every other form keeps LibreOffice's verdict. It edits both scripts, and adds our `KEY` fix and suggestion tables to the `.aff` files. Run it in the top folder, with a checkout of LibreOffice's [dictionaries](https://git.libreoffice.org/dictionaries) repository, then check the result:
+
+```sh
+python3 tools/port_libreoffice.py ../dictionaries
+python3 tools/check_libreoffice.py ../dictionaries
+```
+
+The check compares `sr/` with the checkout's last commit. It lists the forms of every entry, and asks Hunspell as well when `libhunspell` is installed.
+
 ## Contributors
 
 The sources below don't give a complete history, so this list may not be complete. It names everyone the sources name. Corrections are welcome.

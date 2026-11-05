@@ -2,6 +2,10 @@
 
 Each version lists what changed from the one before. Version 1.0 lists what changed from the July 2019 files in `source/2019/`.
 
+## Unreleased
+
+- **Tools:** `tools/port_libreoffice.py` ports `corrections.tsv` onto LibreOffice's Serbian dictionaries, and `tools/check_libreoffice.py` checks the result. The dictionaries themselves are unchanged.
+
 ## 1.0.1
 
 - **Spelling:** 90 place names are in, in the nominative only: `Требевић`, `Бјелашница`, `Зрмања`, `Шолта`, `Ладога`, `Лузон`, `Хиспањола` and others. LibreOffice's dictionary accepts them, and 1.0 accepted only their adjectives (`требевићки`, `ладошки`). LibreOffice has them in lowercase, which also lets `требевић` through; here they are capitalised. Their case forms, such as `Требевића`, are still marked, as in LibreOffice.
