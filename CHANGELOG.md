@@ -2,6 +2,10 @@
 
 Each version lists what changed from the one before. Version 1.0 lists what changed from the July 2019 files of Milutin Smiljanić's Korektor, which were in `source/2019/` until 1.1.
 
+## 1.1.1
+
+- **Spelling:** eight entries that 1.1 added are out again: `адхерентност`, `Надал`, `Ноле`, `Федерер` (two entries each for the names) and `РСД`. Their stems and forms were taken from Korektor's files, which are under GNU GPL 3 and LGPL 3 only, so they don't belong in a dictionary offered under the three licences. These words are rejected again, as in LibreOffice; everything else is as in 1.1. `corrections.tsv` now has 147 entries out and 348 in.
+
 ## 1.1
 
 - **Base and licence:** the spelling dictionaries are now built on LibreOffice's Serbian dictionary, version 2019.04.19 (LibreOffice dictionaries commit 4f1df64, in `source/libreoffice/`), which Milutin Smiljanić offers under GNU LGPL 3 or later, MPL 2 or later, or GNU GPL 3 or later.

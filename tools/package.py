@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Builds the release archives in dist/. Run from the top folder of the repository.
 
-    python3 tools/package.py 1.1
+    python3 tools/package.py 1.1.1
 
 serbian-dictionaries-<version>.zip holds the two folders as they are. The -indesign archive holds
 the same files under the names InDesign's Info.plist lists, sr_RS (Cyrillic) and sh_RS (Latin).

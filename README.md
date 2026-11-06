@@ -7,7 +7,7 @@ Hunspell spelling dictionaries and Hyphen hyphenation patterns for Serbian, in C
 | `sr_Cyrl_RS/` | Cyrillic | `sr_Cyrl_RS.aff`, `sr_Cyrl_RS.dic` | `hyph_sr_Cyrl_RS.dic` |
 | `sr_Latn_RS/` | Latin | `sr_Latn_RS.aff`, `sr_Latn_RS.dic` | `hyph_sr_Latn_RS.dic` |
 
-All files are UTF-8. Version 1.1; [CHANGELOG.md](CHANGELOG.md) lists what changed, and [INSTALL.md](INSTALL.md) says how to install the files in ONLYOFFICE, InDesign and other programs.
+All files are UTF-8. Version 1.1.1; [CHANGELOG.md](CHANGELOG.md) lists what changed, and [INSTALL.md](INSTALL.md) says how to install the files in ONLYOFFICE, InDesign and other programs.
 
 ## File names
 
@@ -67,7 +67,7 @@ The sources below don't give a complete history, so this list may not be complet
 - **The Chromium project:** `sr.dic_delta`, merged into `hunspell-sr` in 2010.
 - **The Serbian LibreOffice community:** named as maintainer of the extension.
 
-Versions 1.0 and 1.0.1 were built on a later generation of his dictionary, the July 2019 files of his Korektor, which he offers under GNU GPL 3 and LGPL 3 only. Version 1.1 is built on LibreOffice's, so that the spelling files carry the three licences he states there. The CHANGELOG lists what that changed.
+Versions 1.0 and 1.0.1 were built on a later generation of his dictionary, the July 2019 files of his Korektor, which he offers under GNU GPL 3 and LGPL 3 only. Versions from 1.1 on are built on LibreOffice's, so that the spelling files carry the three licences he states there. The CHANGELOG lists what that changed.
 
 **Hyphenation patterns**
 
