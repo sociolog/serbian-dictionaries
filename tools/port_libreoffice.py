@@ -4,10 +4,9 @@ repository, with a checkout of LibreOffice's dictionaries repository:
 
     python3 tools/port_libreoffice.py ../dictionaries
 
-Our spelling files are LibreOffice's sr/ files at commit 4f1df64 with corrections.tsv applied, so
-for that commit this gives the same files as tools/apply_corrections.py. A later version of
-LibreOffice's file may number its affix classes differently or build some words differently (сип/1125
-gives сип and сипски), so each correction is matched by the word forms it gives, not by its flags:
+Our spelling files are built on Korektor's files, a later version of LibreOffice's, which numbers
+its affix classes differently and builds some words differently (сип/1125 gives сип and сипски).
+So each correction is matched by the word forms it gives, not by its flags:
 a form a correction touches ends up accepted exactly when sr_Cyrl_RS accepts it, and every other
 form keeps LibreOffice's verdict. sr-Latn.dic is a line-by-line transliteration of sr.dic with
 the same classes, so every change is made in both. The .aff files get the rule fixes of
@@ -21,7 +20,7 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from apply_corrections import aff_fixes, latin  # noqa: E402
+from apply_corrections import latin  # noqa: E402
 
 ALPHABET = "абвгдђежзијклљмнњопрстћуфхцчџш"
 ORDER = {c: i for i, c in enumerate(ALPHABET)}
@@ -86,6 +85,19 @@ class Aff:
                 if len(w) > len(strip) and w.startswith(strip) and (rx is None or rx.search(w)):
                     out.add(add + w[len(strip):])
         return out
+
+
+def aff_fixes(tr=lambda l: l):
+    """The rule lines of aff-fixes.tsv to correct, as {old: new}, in the script that tr gives. A fix
+    that the transliteration makes moot, such as a Latin letter in a Cyrillic ending, is left out."""
+    fixes = {}
+    for row in open("aff-fixes.tsv", encoding="utf-8"):
+        if row.startswith("#") or not row.strip():
+            continue
+        old, new = row.rstrip("\n").split("\t")[:2]
+        if tr(old) != tr(new):
+            fixes[tr(old)] = tr(new)
+    return fixes
 
 
 def fix(lines, fixes):
