@@ -7,7 +7,7 @@ Hunspell spelling dictionaries and Hyphen hyphenation patterns for Serbian, in C
 | `sr_Cyrl_RS/` | Cyrillic | `sr_Cyrl_RS.aff`, `sr_Cyrl_RS.dic` | `hyph_sr_Cyrl_RS.dic` |
 | `sr_Latn_RS/` | Latin | `sr_Latn_RS.aff`, `sr_Latn_RS.dic` | `hyph_sr_Latn_RS.dic` |
 
-All files are UTF-8. Version 1.1.1; [CHANGELOG.md](CHANGELOG.md) lists what changed, and [INSTALL.md](INSTALL.md) says how to install the files in ONLYOFFICE, InDesign and other programs.
+All files are UTF-8. Version 1.2; [CHANGELOG.md](CHANGELOG.md) lists what changed, and [INSTALL.md](INSTALL.md) says how to install the files in ONLYOFFICE, InDesign and other programs.
 
 ## File names
 
@@ -33,7 +33,7 @@ DesignCraft reads all of these with no extra files. LibreOffice lists only `RS` 
 
 ## Building
 
-The spelling dictionaries are built from LibreOffice's Serbian dictionary, which `source/libreoffice/` holds as it is (LibreOffice dictionaries commit [4f1df64](https://github.com/LibreOffice/dictionaries/tree/4f1df64b2e8e14751aa7c2205d170ca016071315/sr)). `corrections.tsv` lists the entries to remove from its `sr.dic` and the entries to add, `aff-fixes.tsv` the affix rules to correct, and `tables/` holds the `KEY`, `MAP`, `TRY` and `REP` lines for the `.aff` files. The Latin dictionary is the Cyrillic one, transliterated line by line, as LibreOffice's `sr-Latn.dic` is, so a correction is made once, in Cyrillic. To rebuild both, run this in the top folder:
+The spelling dictionaries are built from Milutin Smiljanić's dictionary in his Korektor (July 2019), which `source/korektor/` holds as it is ([msmiljan/korektor](https://github.com/msmiljan/korektor), commit e56d916). `corrections.tsv` lists the entries to remove from its `sr_RS.dic` and the entries to add, and `tables/` holds the `KEY`, `MAP`, `TRY` and `REP` lines for the `.aff` files. The Latin dictionary is the Cyrillic one, transliterated line by line, as Korektor's `sh_RS.dic` is, so a correction is made once, in Cyrillic. To rebuild both, run this in the top folder:
 
 ```sh
 python3 tools/apply_corrections.py
@@ -43,7 +43,7 @@ The hyphenation files are Milutin Smiljanić's, from his Korektor (`source/korek
 
 ### Porting the corrections to LibreOffice
 
-For LibreOffice's commit 4f1df64, porting gives the same files as `tools/apply_corrections.py`, with LibreOffice's line endings. A later version of LibreOffice's file may number its affix classes differently or build some words differently, so `tools/port_libreoffice.py` doesn't copy the entries: it matches each correction by the word forms it gives: a form a correction touches ends up accepted exactly when `sr_Cyrl_RS` accepts it, and every other form keeps LibreOffice's verdict. It edits both scripts, and applies `aff-fixes.tsv`, our `KEY` fix and our suggestion tables to the `.aff` files. Run it in the top folder, with a checkout of LibreOffice's [dictionaries](https://git.libreoffice.org/dictionaries) repository, then check the result:
+LibreOffice ships an earlier generation of the same dictionary (version 2019.04.19), with its affix classes numbered differently and some words built differently. It doesn't have Korektor's later changes: there, place names are in lowercase (`земун`), so porting gives files that differ from ours in those. LibreOffice can also take our files as they are. `tools/port_libreoffice.py` doesn't copy the entries: it matches each correction by the word forms it gives: a form a correction touches ends up accepted exactly when `sr_Cyrl_RS` accepts it, and every other form keeps LibreOffice's verdict. It edits both scripts, and applies `aff-fixes.tsv` (affix rules to correct in LibreOffice's file), our `KEY` fix and our suggestion tables to the `.aff` files. Run it in the top folder, with a checkout of LibreOffice's [dictionaries](https://git.libreoffice.org/dictionaries) repository, then check the result:
 
 ```sh
 python3 tools/port_libreoffice.py ../dictionaries
@@ -58,7 +58,7 @@ The sources below don't give a complete history, so this list may not be complet
 
 **Spelling dictionaries**
 
-- **Milutin Smiljanić:** developer of the rule-based Serbian dictionary that LibreOffice has shipped since 19 April 2019, on which these are built.
+- **Milutin Smiljanić:** developer of the rule-based Serbian dictionary that LibreOffice has shipped since 19 April 2019, and of its later version in his Korektor (July 2019), on which these are built.
 - **Goran Rakić:** maintainer of `dict-sr`, `hunspell-sr` and the LibreOffice extension, 2010–2013.
 - **Miloš Popović** and **Aleksandar Urošević:** contributions to `dict-sr`.
 - **Nikola Smolenski:** merged a personal dictionary into `hunspell-sr`, 2013.
@@ -67,7 +67,7 @@ The sources below don't give a complete history, so this list may not be complet
 - **The Chromium project:** `sr.dic_delta`, merged into `hunspell-sr` in 2010.
 - **The Serbian LibreOffice community:** named as maintainer of the extension.
 
-Versions 1.0 and 1.0.1 were built on a later generation of his dictionary, the July 2019 files of his Korektor, which he offers under GNU GPL 3 and LGPL 3 only. Versions from 1.1 on are built on LibreOffice's, so that the spelling files carry the three licences he states there. The CHANGELOG lists what that changed.
+Versions 1.0 and 1.0.1 were built on the Korektor files, 1.1 and 1.1.1 on LibreOffice's, because Korektor was published under GNU GPL 3 and LGPL 3 only. In November 2026 Milutin Smiljanić allowed the Korektor dictionary to be used under the same three licences as his LibreOffice dictionary, so from 1.2 on these are built on Korektor's files again. The CHANGELOG lists what each change of base changed.
 
 **Hyphenation patterns**
 
@@ -93,7 +93,7 @@ These licences come from the sources, so they can't be replaced by another one. 
 | `hyph_*.dic`, `patterns/` (hyphenation) | GNU LGPL 3 | `LGPL-3.0-only` |
 | `tools/`, `corrections.tsv`, `aff-fixes.tsv`, `tables/` and the documentation | Same as the spelling dictionaries | `LGPL-3.0-or-later OR MPL-2.0 OR GPL-3.0-or-later` |
 
-The spelling terms are those LibreOffice states for Milutin Smiljanić's dictionary. The earlier `hunspell-sr` was offered under LGPL 2.1 or later, MPL 1.1 or later, GPL 2 or later, or CC BY-SA 3.0, and those terms allow the versions above.
+The spelling terms are those LibreOffice states for Milutin Smiljanić's dictionary. In November 2026 he allowed the dictionary of his Korektor (2019), on which these files are built, to be used under the same terms. The earlier `hunspell-sr` was offered under LGPL 2.1 or later, MPL 1.1 or later, GPL 2 or later, or CC BY-SA 3.0, and those terms allow the versions above.
 
 The hyphenation terms are those of Korektor's LibreOffice extension (`dict-sr.oxt`, version 2019.07.26), which holds these files. Goran Rakić's files, which they share most patterns with, are under GNU LGPL 2.1 or later, as LibreOffice states, and that allows version 3. The TeX originals are under the LaTeX Project Public License 1 or later, in [hyph-utf8](https://github.com/hyphenation/tex-hyphen).
 
@@ -103,7 +103,7 @@ The licence texts are in `LICENSES/`.
 
 ## Sources
 
-- LibreOffice dictionaries: <https://github.com/LibreOffice/dictionaries/tree/master/sr>
 - Milutin Smiljanić's Korektor: <https://github.com/msmiljan/korektor>
+- LibreOffice dictionaries: <https://github.com/LibreOffice/dictionaries/tree/master/sr>
 - Goran Rakić's repositories: <https://github.com/grakic/hunspell-sr>, <https://github.com/grakic/hyphen-sr>, <https://github.com/grakic/dict-sr-oxt>
 - hyph-utf8: <https://github.com/hyphenation/tex-hyphen>

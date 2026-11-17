@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
-"""Builds both spelling dictionaries from source/libreoffice/, corrections.tsv, aff-fixes.tsv and
-tables/.
+"""Builds both spelling dictionaries from source/korektor/, corrections.tsv and tables/.
 
-source/libreoffice/ holds LibreOffice's Serbian files as they are. corrections.tsv lists entries
-to remove from sr.dic and entries to add, with LibreOffice's affix classes. aff-fixes.tsv lists
-affix rule lines to correct in sr.aff, and tables/ holds the KEY, MAP, TRY and REP lines for the
-.aff files. The Latin dictionary is the Cyrillic one, transliterated line by line, as LibreOffice's
-sr-Latn.dic is, so a correction is made once. Run from the top folder of the repository.
+source/korektor/ holds the spelling files of Milutin Smiljanić's Korektor (July 2019) as they are.
+corrections.tsv lists entries to remove from sr_RS.dic and entries to add, with Korektor's affix
+classes, and tables/ holds the KEY, MAP, TRY and REP lines for the .aff files. The Latin dictionary
+is the Cyrillic one, transliterated line by line, as Korektor's sh_RS.dic is, so a correction is
+made once. Run from the top folder of the repository.
 """
 import bisect
 import collections
@@ -37,38 +36,21 @@ def key(entry):
     return [ORDER.get(c, 100 + ord(c)) for c in stem.casefold()], stem
 
 
-def aff_fixes(tr=lambda l: l):
-    """The rule lines to correct, as {old: new}, in the script that tr gives. A fix that the
-    transliteration makes moot, such as a Latin letter in a Cyrillic ending, is left out."""
-    fixes = {}
-    for row in open("aff-fixes.tsv", encoding="utf-8"):
-        if row.startswith("#") or not row.strip():
-            continue
-        old, new = row.rstrip("\n").split("\t")[:2]
-        if tr(old) != tr(new):
-            fixes[tr(old)] = tr(new)
-    return fixes
-
-
-def aff(source, tables, fixes):
+def aff(source, tables):
     # The KEY line is replaced where it is; MAP, TRY and REP go after WORDCHARS.
     table = [l for l in lines(tables) if l]
     key_line = [l for l in table if l.startswith("KEY ")]
-    out, fixed = [], set()
+    out = []
     for l in lines(source):
-        if l in fixes:
-            fixed.add(l)
-            l = fixes[l]
         out.append(key_line[0] if l.startswith("KEY ") and key_line else l)
         if l.startswith("WORDCHARS"):
             out += [t for t in table if not t.startswith("KEY ")]
-    assert fixed == set(fixes), set(fixes) - fixed
     return "\n".join(out)
 
 
 def main():
-    entries = [l for l in lines("source/libreoffice/sr.dic")[1:] if l]
-    assert [latin(e) for e in entries] == [l for l in lines("source/libreoffice/sr-Latn.dic")[1:] if l]
+    entries = [l for l in lines("source/korektor/sr_RS.dic")[1:] if l]
+    assert [latin(e) for e in entries] == [l for l in lines("source/korektor/sh_RS.dic")[1:] if l]
     remove, add = collections.Counter(), []
     for row in open("corrections.tsv", encoding="utf-8"):
         if row.startswith("#") or not row.strip():
@@ -94,9 +76,9 @@ def main():
         i = bisect.bisect_right(keys, key(e))
         words.insert(i, e)
         keys.insert(i, key(e))
-    for d, src, tr in (("sr_Cyrl_RS", "sr", lambda w: w), ("sr_Latn_RS", "sr-Latn", latin)):
+    for d, src, tr in (("sr_Cyrl_RS", "sr_RS", lambda w: w), ("sr_Latn_RS", "sh_RS", latin)):
         open(f"{d}/{d}.dic", "w", encoding="utf-8").write(f"{len(words)}\n" + "\n".join(map(tr, words)) + "\n")
-        open(f"{d}/{d}.aff", "w", encoding="utf-8").write(aff(f"source/libreoffice/{src}.aff", f"tables/{d}.txt", aff_fixes(tr)))
+        open(f"{d}/{d}.aff", "w", encoding="utf-8").write(aff(f"source/korektor/{src}.aff", f"tables/{d}.txt"))
     print(f"{len(entries)} entries, {len(entries) - len(kept)} removed, {len(add)} added, {len(words)} now")
 
 

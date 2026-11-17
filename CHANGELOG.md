@@ -1,6 +1,18 @@
 # Changes
 
-Each version lists what changed from the one before. Version 1.0 lists what changed from the July 2019 files of Milutin Smiljanić's Korektor, which were in `source/2019/` until 1.1.
+Each version lists what changed from the one before. Version 1.0 lists what changed from the July 2019 files of Milutin Smiljanić's Korektor, which were in `source/2019/` until 1.1 and are in `source/korektor/` from 1.2 on.
+
+## 1.2
+
+- **Base and licence:** the spelling dictionaries are built again on the July 2019 files of Milutin Smiljanić's Korektor ([msmiljan/korektor](https://github.com/msmiljan/korektor), commit e56d916, now in `source/korektor/`). They are a later version of his LibreOffice dictionary (2019.04.19), on which 1.1 and 1.1.1 were built. In November 2026 he allowed them to be used under the same three licences (see the README).
+- **Corrections:** `corrections.tsv` is in Korektor's affix classes again. It is the list of 1.0.1 without six entries taken out (see below): 133 entries out, 454 in.
+- **Spelling,** compared with 1.1.1, form by form, in both scripts:
+  - Five words taken out in 1.0, in the review of rare words, are back, as Milutin Smiljanić asked: `трибунат`, `ократак`, `јучерањи`, `ахронолошки` and `јабукар`.
+  - The words taken out in 1.1.1 are back, because they are in Korektor's files: `адхерентност`, `Надал`, `Ноле`, `Федерер` and `РСД`.
+  - Place names are accepted only capitalised, as in Korektor. The 5,027 lowercase forms that 1.1 added (`земун`, `дармштат`) are marked again, and so are the 16 lowercase place-name stems that 1.0.1 left out (`каспиј`, `лакадив`).
+  - Nothing else changes.
+- **Hyphenation:** unchanged.
+- **Tools:** `tools/apply_corrections.py` builds from `source/korektor/`, `corrections.tsv` and `tables/`; `source/libreoffice/` is gone. `tools/port_libreoffice.py` still applies `corrections.tsv` and `aff-fixes.tsv` to a checkout of LibreOffice's dictionaries.
 
 ## 1.1.1
 
